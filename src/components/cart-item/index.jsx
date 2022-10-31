@@ -53,11 +53,21 @@ const CartItem = () => {
                       gap: ".5rem",
                     }}
                   >
-                    <Button variant="contained" disableElevation size="small" onClick={() => decrementHandler(item)}>
+                    <Button
+                      variant="contained"
+                      disableElevation
+                      size="small"
+                      onClick={() => decrementHandler(item)}
+                    >
                       -
                     </Button>
                     <p>{item.quantity}</p>
-                    <Button variant="contained" disableElevation size="small" onClick={() => incrementHandler(item)}>
+                    <Button
+                      variant="contained"
+                      disableElevation
+                      size="small"
+                      onClick={() => incrementHandler(item)}
+                    >
                       +
                     </Button>
                   </div>

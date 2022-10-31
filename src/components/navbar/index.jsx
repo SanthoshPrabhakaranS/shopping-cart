@@ -14,9 +14,17 @@ const Navbar = () => {
           Shopping cart
         </Typography>
         <Box>
-          <Input type="text" placeholder="Search" onChange={(e) => setSearch(e.target.value)} />
+          <Input
+            type="text"
+            placeholder="Search"
+            onChange={(e) => setSearch(e.target.value)}
+          />
         </Box>
-        <NavBtn onClick={() => setShowCart(!showCart)}>
+        <NavBtn
+          onClick={() => {
+            setShowCart(!showCart);
+          }}
+        >
           <Badge
             badgeContent={cart.length > 0 ? cart.length : "0"}
             color="primary"
@@ -25,7 +33,7 @@ const Navbar = () => {
           </Badge>
         </NavBtn>
       </Container>
-        {showCart ? <CartItem /> : null}
+      {showCart ? <CartItem /> : null}
     </>
   );
 };
